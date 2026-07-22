@@ -1,30 +1,169 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pradeep Maddi | Cloud Platform Engineer &amp; FinOps</title>
   <meta name="description" content="Pradeep Maddi — Cloud Platform Engineer and FinOps practitioner running a 150+ account AWS Organization. I build evidence-based cloud platforms."/>
   <meta property="og:title" content="Pradeep Maddi | Cloud Platform Engineer &amp; FinOps"/>
-  <meta property="og:description" content="Cloud Platform Engineer & FinOps — 150+ account AWS Organization. I build evidence-based cloud platforms."/>
+  <meta property="og:description" content="Cloud Platform Engineer &amp; FinOps — 150+ account AWS Organization. I build evidence-based cloud platforms."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://prmaddi6233.github.io"/>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b1120'/%3E%3Ctext x='50' y='68' font-size='46' font-family='monospace' font-weight='bold' fill='%2338bdf8' text-anchor='middle'%3EPM%3C/text%3E%3C/svg%3E"/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230d1117'/%3E%3Ctext x='50' y='68' font-size='46' font-family='monospace' font-weight='bold' fill='%23FF9900' text-anchor='middle'%3EPM%3C/text%3E%3C/svg%3E"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <script>
-    // Enable JS-only reveal styles, with a hard failsafe so content can never
-    // stay hidden if main.js fails to load.
-    document.documentElement.className = "js";
-    window.addEventListener("load", function () {
-      setTimeout(function () {
-        var els = document.querySelectorAll(".reveal:not(.visible)");
-        for (var i = 0; i < els.length; i++) els[i].classList.add("visible");
-      }, 2500);
-    });
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0d1117;--bg2:#161b22;--card:rgba(22,27,34,0.6);
+  --text:#f0f6fc;--text2:#8b949e;--accent:#FF9900;--link:#58a6ff;
+  --border:rgba(240,246,252,0.1);--glow:rgba(255,153,0,0.3);
+  --radius:12px;--font:'Inter',-apple-system,sans-serif;
+}
+[data-theme="light"]{
+  --bg:#ffffff;--bg2:#f6f8fa;--card:rgba(246,248,250,0.8);
+  --text:#1f2328;--text2:#656d76;--border:rgba(31,35,40,0.15);--glow:rgba(255,153,0,0.2);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s}
+body::before{content:'';position:fixed;inset:0;background:linear-gradient(135deg,#0d1117,#161b22,#0d1117,#1c2128);background-size:400% 400%;animation:gradShift 15s ease infinite;z-index:-1}
+[data-theme="light"] body::before{background:linear-gradient(135deg,#fff,#f6f8fa,#fff,#f0f3f6);background-size:400% 400%}
+@keyframes gradShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+a{color:var(--link);text-decoration:none}
+
+/* Nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 2rem;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);background:rgba(13,17,23,0.8);border-bottom:1px solid var(--border);transition:background .3s}
+[data-theme="light"] .nav{background:rgba(255,255,255,0.85)}
+.nav__inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.nav__logo{font-weight:700;font-size:1.25rem;color:var(--accent);text-decoration:none}
+.nav__links{display:flex;align-items:center;gap:2rem}
+.nav__links a{color:var(--text2);text-decoration:none;font-size:.875rem;font-weight:500;transition:color .2s}
+.nav__links a:hover{color:var(--text)}
+.nav__cta{background:var(--accent)!important;color:#0d1117!important;padding:.5rem 1rem;border-radius:6px;font-weight:600}
+.theme-toggle{background:none;border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:all .2s;margin-left:1rem}
+.theme-toggle:hover{border-color:var(--accent);background:rgba(255,153,0,0.1)}
+.nav__burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
+.nav__burger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem 4rem}
+.hero__inner{max-width:720px}
+.eyebrow{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:1rem}
+.hero__photo-wrap{width:154px;height:154px;border-radius:50%;margin:0 auto 1.5rem;padding:3px;background:linear-gradient(135deg,#FF9900,#58a6ff,#FF9900,#58a6ff);background-size:300% 300%;animation:borderGlow 4s ease infinite}
+@keyframes borderGlow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.hero__photo-wrap img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+.hero__name{font-size:clamp(2.5rem,5vw,3.5rem);font-weight:700;margin-bottom:.5rem;letter-spacing:-.02em}
+.hero__tag{font-size:clamp(1.1rem,2.5vw,1.4rem);font-weight:400;color:var(--text2);margin-bottom:1.5rem;min-height:2em}
+.grad{background:linear-gradient(135deg,var(--accent),#58a6ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.typing-cursor{display:inline-block;width:2px;height:1.2em;background:var(--accent);margin-left:2px;vertical-align:text-bottom;animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+.hero__blurb{font-size:1.05rem;color:var(--text2);margin-bottom:2rem;line-height:1.7}
+.hero__blurb strong{color:var(--text)}
+.hero__actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+.btn{display:inline-flex;align-items:center;padding:.75rem 1.5rem;border-radius:8px;font-weight:600;font-size:.9rem;text-decoration:none;transition:all .2s}
+.btn--primary{background:var(--accent);color:#0d1117}
+.btn--primary:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(255,153,0,0.4)}
+.btn--ghost{border:1px solid var(--border);color:var(--text)}
+.btn--ghost:hover{border-color:var(--accent);background:rgba(255,153,0,0.05)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+.stat__num{display:block;font-size:2rem;font-weight:700}
+.stat__label{font-size:.8rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em}
+
+/* Sections */
+.section{max-width:1100px;margin:0 auto;padding:5rem 2rem}
+.section__head{display:flex;align-items:center;gap:1rem;margin-bottom:3rem}
+.section__index{font-size:.8rem;font-weight:600;color:var(--accent);font-family:monospace}
+.section__title{font-size:1.75rem;font-weight:700}
+
+/* About */
+.about{display:grid;grid-template-columns:1.5fr 1fr;gap:3rem;align-items:start}
+.about__text p{margin-bottom:1rem;color:var(--text2)}
+.about__text strong{color:var(--text)}
+.about__text em{color:var(--accent);font-style:normal}
+.about__photo{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,153,0,0.6);box-shadow:0 4px 20px rgba(0,0,0,.15);margin-bottom:1.5rem;float:left;margin-right:1.5rem}
+.about__principles{list-style:none;padding:0}
+.about__principles li{padding:.5rem 0 .5rem 1.5rem;position:relative;color:var(--text2)}
+.about__principles li::before{content:'▸';position:absolute;left:0;color:var(--accent)}
+.about__skills h3{font-size:.9rem;font-weight:600;margin-bottom:1rem;color:var(--text2);text-transform:uppercase;letter-spacing:.05em}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{padding:.35rem .75rem;background:var(--card);border:1px solid var(--border);border-radius:6px;font-size:.8rem;color:var(--text2);transition:all .2s}
+.chip:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--text)}
+.chip-group{width:100%;background:none;border:none;padding:.5rem 0 .25rem;font-weight:600;color:var(--text);font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+.chip-group:hover{transform:none;border-color:transparent}
+
+/* Timeline */
+.timeline{position:relative;padding-left:2rem;border-left:2px solid var(--border)}
+.tl{position:relative;margin-bottom:3rem}
+.tl__dot{position:absolute;left:-2.55rem;top:.5rem;width:12px;height:12px;border-radius:50%;background:var(--bg2);border:2px solid var(--text2);transition:all .3s}
+.tl--current .tl__dot{border-color:var(--accent);background:var(--accent);box-shadow:0 0 0 4px rgba(255,153,0,0.2);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(255,153,0,0.2)}50%{box-shadow:0 0 0 8px rgba(255,153,0,0.05)}}
+.tl__meta{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:.5rem}
+.tl__date,.tl__loc{font-size:.8rem;color:var(--text2);font-family:monospace}
+.tl__role{font-size:1.1rem;font-weight:600;margin-bottom:.75rem}
+.tl__at{color:var(--text2);font-weight:400}
+.tl__points{list-style:none;padding:0}
+.tl__points li{padding:.35rem 0 .35rem 1.25rem;position:relative;color:var(--text2);font-size:.9rem}
+.tl__points li::before{content:'–';position:absolute;left:0;color:var(--accent)}
+.tl__points li strong{color:var(--text)}
+
+/* Cards - Glassmorphism */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem}
+.card{display:block;padding:1.5rem;border-radius:var(--radius);background:var(--card);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--border);text-decoration:none;color:var(--text);transition:all .3s ease}
+.card:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 12px 40px rgba(0,0,0,0.3);border-color:rgba(255,153,0,0.3)}
+.card__icon{font-size:1.25rem;margin-bottom:.75rem;color:var(--accent)}
+.card h3{font-size:1rem;font-weight:600;margin-bottom:.5rem;color:var(--text)}
+.card p{font-size:.85rem;color:var(--text2);line-height:1.5}
+
+/* Spotlight */
+.spotlight{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;padding:2rem;border-radius:var(--radius);background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--border);margin-bottom:2rem}
+.spotlight__media{border-radius:8px;overflow:hidden}
+.spotlight__media img{width:100%;display:block;border-radius:8px}
+.spotlight__body .eyebrow{margin-bottom:.5rem}
+.spotlight__body h3{font-size:1.25rem;margin-bottom:.75rem}
+.spotlight__body h3 a{color:var(--text);text-decoration:none}
+.spotlight__body h3 a:hover{color:var(--accent)}
+.spotlight__body p{font-size:.9rem;color:var(--text2);margin-bottom:.75rem}
+.spotlight__adrs{font-size:.8rem;margin-bottom:1rem}
+.spotlight__adrs a{color:var(--link)}
+.spotlight__adrs a:hover{text-decoration:underline}
+
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin-top:auto}
+.tags li{padding:.25rem .6rem;background:rgba(255,153,0,0.1);border:1px solid rgba(255,153,0,0.2);border-radius:4px;font-size:.7rem;color:var(--accent);font-family:monospace}
+.work__more{margin-top:2rem;text-align:center}
+.work__more a{color:var(--link);font-weight:500}
+
+/* Certs */
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+.cert{display:block;padding:1.5rem;border-radius:var(--radius);background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--border);text-decoration:none;color:var(--text);transition:all .3s}
+.cert:hover{transform:translateY(-3px);border-color:rgba(255,153,0,0.3);box-shadow:0 8px 30px rgba(0,0,0,.2)}
+.cert h3{font-size:1.1rem;font-weight:600;margin-bottom:.25rem;color:var(--accent)}
+.cert p{font-size:.85rem;color:var(--text2);margin-bottom:.75rem}
+.cert__verify{font-size:.75rem;color:var(--link);font-family:monospace}
+
+/* Contact */
+.contact{text-align:center;padding:6rem 2rem}
+.contact__title{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;margin:.75rem 0}
+.contact__blurb{color:var(--text2);max-width:500px;margin:0 auto 2rem}
+
+/* Footer */
+.footer{text-align:center;padding:2rem;border-top:1px solid var(--border);font-size:.8rem;color:var(--text2);font-family:monospace;display:flex;flex-direction:column;gap:.25rem}
+
+/* Scroll Reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* Responsive */
+@media(max-width:768px){
+  .nav__links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(13,17,23,0.95);backdrop-filter:blur(12px);flex-direction:column;padding:1.5rem;gap:1rem;border-bottom:1px solid var(--border)}
+  .nav__links.open{display:flex}
+  .nav__burger{display:flex}
+  .about{grid-template-columns:1fr}
+  .spotlight{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .hero__actions{flex-direction:column;align-items:center}
+}
+</style>
 </head>
 <body>
 
@@ -39,6 +178,7 @@
         <a href="#certs">Certifications</a>
         <a class="nav__cta" href="#contact">Contact</a>
       </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
       <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -51,9 +191,11 @@
     <section class="hero">
       <div class="hero__inner">
         <p class="eyebrow reveal">Cloud Platform Engineer · FinOps</p>
-        <img src="https://avatars.githubusercontent.com/u/60829338?v=4" alt="Pradeep Maddi" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255, 153, 0, 0.6); box-shadow: 0 4px 20px rgba(0,0,0,0.15); margin-bottom: 1.5rem;" />
+        <div class="hero__photo-wrap reveal">
+          <img src="https://avatars.githubusercontent.com/u/60829338?v=4" alt="Pradeep Maddi"/>
+        </div>
         <h1 class="hero__name reveal">Pradeep Maddi</h1>
-        <h2 class="hero__tag reveal">I build <span class="grad">evidence-based cloud platforms.</span></h2>
+        <h2 class="hero__tag reveal">I build <span class="grad"><span class="typing-text" id="typingText"></span><span class="typing-cursor"></span></span></h2>
         <p class="hero__blurb reveal">
           I run platform engineering and FinOps on a <strong>150+ account AWS Organization</strong> —
           account lifecycle automation, Kubernetes at scale, and cost governance engineering
@@ -64,11 +206,11 @@
           <a class="btn btn--primary" href="#work">View my work</a>
           <a class="btn btn--ghost" href="https://www.linkedin.com/in/pradeep-maddi" target="_blank" rel="noopener">Get in touch</a>
         </div>
-        <div class="stats reveal">
-          <div class="stat"><span class="stat__num grad">150+</span><span class="stat__label">AWS accounts</span></div>
-          <div class="stat"><span class="stat__num grad">8+</span><span class="stat__label">Years in cloud</span></div>
-          <div class="stat"><span class="stat__num grad">5</span><span class="stat__label">Companies</span></div>
-          <div class="stat"><span class="stat__num grad">3</span><span class="stat__label">Certifications</span></div>
+        <div class="stats reveal" id="statsSection">
+          <div class="stat"><span class="stat__num grad" data-target="150" data-suffix="+">0</span><span class="stat__label">AWS accounts</span></div>
+          <div class="stat"><span class="stat__num grad" data-target="8" data-suffix="+">0</span><span class="stat__label">Years in cloud</span></div>
+          <div class="stat"><span class="stat__num grad" data-target="5" data-suffix="">0</span><span class="stat__label">Companies</span></div>
+          <div class="stat"><span class="stat__num grad" data-target="3" data-suffix="">0</span><span class="stat__label">Certifications</span></div>
         </div>
       </div>
     </section>
@@ -81,7 +223,7 @@
       </div>
       <div class="about reveal">
         <div class="about__text">
-          <img src="https://avatars.githubusercontent.com/u/60829338?v=4" alt="Pradeep Maddi" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255, 153, 0, 0.6); box-shadow: 0 4px 20px rgba(0,0,0,0.15); margin-bottom: 1.5rem; float: left; margin-right: 1.5rem;" />
+          <img class="about__photo" src="https://avatars.githubusercontent.com/u/60829338?v=4" alt="Pradeep Maddi"/>
           <p>
             Every cloud platform tells you to resize your instances — none of them prove
             it's safe. My work lives in that gap: <strong>deterministic checks</strong> where
@@ -126,10 +268,10 @@
         <h2 class="section__title">Experience</h2>
       </div>
       <div class="timeline">
-        <article class="tl reveal">
+        <article class="tl tl--current reveal">
           <div class="tl__dot"></div>
           <div class="tl__body">
-            <div class="tl__meta"><span class="tl__date mono">May 2024 — Present</span><span class="tl__loc mono">Winnipeg, CA · Remote</span></div>
+            <div class="tl__meta"><span class="tl__date">May 2024 — Present</span><span class="tl__loc">Winnipeg, CA · Remote</span></div>
             <h3 class="tl__role">Cloud Platform Engineer <span class="tl__at">· Pollard Banknote</span></h3>
             <ul class="tl__points">
               <li>Operate platform engineering and FinOps across a <strong>150+ account AWS Organization</strong> serving high-performance workloads on AWS and Kubernetes.</li>
@@ -142,7 +284,7 @@
         <article class="tl reveal">
           <div class="tl__dot"></div>
           <div class="tl__body">
-            <div class="tl__meta"><span class="tl__date mono">May 2023 — Nov 2023</span><span class="tl__loc mono">St. John's, CA · Hybrid</span></div>
+            <div class="tl__meta"><span class="tl__date">May 2023 — Nov 2023</span><span class="tl__loc">St. John's, CA · Hybrid</span></div>
             <h3 class="tl__role">Cloud Engineer <span class="tl__at">· Viasat</span></h3>
             <ul class="tl__points">
               <li>Automated infrastructure with Jenkins + Terraform, reducing deployment time 80%.</li>
@@ -154,7 +296,7 @@
         <article class="tl reveal">
           <div class="tl__dot"></div>
           <div class="tl__body">
-            <div class="tl__meta"><span class="tl__date mono">Aug 2021 — May 2023</span><span class="tl__loc mono">St. John's, CA · Remote</span></div>
+            <div class="tl__meta"><span class="tl__date">Aug 2021 — May 2023</span><span class="tl__loc">St. John's, CA · Remote</span></div>
             <h3 class="tl__role">Cloud Engineer <span class="tl__at">· Inmarsat</span></h3>
             <ul class="tl__points">
               <li>Optimized AWS cost efficiency with usage analysis and reserved instances — $10,000/month saved.</li>
@@ -166,7 +308,7 @@
         <article class="tl reveal">
           <div class="tl__dot"></div>
           <div class="tl__body">
-            <div class="tl__meta"><span class="tl__date mono">Nov 2019 — Mar 2021</span><span class="tl__loc mono">Kanata, CA · Remote</span></div>
+            <div class="tl__meta"><span class="tl__date">Nov 2019 — Mar 2021</span><span class="tl__loc">Kanata, CA · Remote</span></div>
             <h3 class="tl__role">Cloud Engineer <span class="tl__at">· Cisco</span></h3>
             <ul class="tl__points">
               <li>Performance optimization via CloudWatch alerts — $50,000/month in savings.</li>
@@ -178,7 +320,7 @@
         <article class="tl reveal">
           <div class="tl__dot"></div>
           <div class="tl__body">
-            <div class="tl__meta"><span class="tl__date mono">May 2017 — Apr 2019</span><span class="tl__loc mono">Hyderabad, IN · Remote</span></div>
+            <div class="tl__meta"><span class="tl__date">May 2017 — Apr 2019</span><span class="tl__loc">Hyderabad, IN · Remote</span></div>
             <h3 class="tl__role">Linux System Administrator <span class="tl__at">· Lotus Info Tech</span></h3>
             <ul class="tl__points">
               <li>Administered 20+ UNIX/Linux servers (Red Hat Satellite, YUM, RPM) and 20,000+ user accounts.</li>
@@ -209,13 +351,13 @@
             automated rollback. Findings ship as SARIF into GitHub Code Scanning. Fail-closed
             by design.
           </p>
-          <p class="spotlight__adrs mono">
+          <p class="spotlight__adrs">
             The judgment behind it —
             <a href="https://github.com/prmaddi6233/cloud-finops-agent/blob/main/docs/adr/0001-why-we-dont-sandbox-benchmark.md" target="_blank" rel="noopener">no sandbox benchmarks</a>,
             <a href="https://github.com/prmaddi6233/cloud-finops-agent/blob/main/docs/adr/0002-agent-is-not-the-control-plane.md" target="_blank" rel="noopener">agent ≠ control plane</a>,
             <a href="https://github.com/prmaddi6233/cloud-finops-agent/blob/main/docs/adr/0003-tiered-validation-model.md" target="_blank" rel="noopener">tiered validation</a>.
           </p>
-          <ul class="tags mono"><li>Python</li><li>boto3</li><li>SARIF</li><li>GitHub Actions</li><li>OIDC</li></ul>
+          <ul class="tags"><li>Python</li><li>boto3</li><li>SARIF</li><li>GitHub Actions</li><li>OIDC</li></ul>
         </div>
       </article>
 
@@ -224,25 +366,25 @@
           <div class="card__icon">◆</div>
           <h3>aws-platform-control-plane</h3>
           <p>Self-service account lifecycle — policy-gated provisioning and decommissioning, Step Functions orchestration, least-privilege IAM, deterministic audit trail.</p>
-          <ul class="tags mono"><li>Python</li><li>Step Functions</li><li>DynamoDB</li></ul>
+          <ul class="tags"><li>Python</li><li>Step Functions</li><li>DynamoDB</li></ul>
         </a>
         <a class="card reveal" href="https://github.com/prmaddi6233/eks-cost-governance-toolkit" target="_blank" rel="noopener">
           <div class="card__icon">◆</div>
           <h3>eks-cost-governance-toolkit</h3>
           <p>Multi-tenant EKS guardrails — Kyverno policy-as-code, budgeted namespaces with ResourceQuota and LimitRange, and OpenCost.</p>
-          <ul class="tags mono"><li>EKS</li><li>Kyverno</li><li>Helm</li></ul>
+          <ul class="tags"><li>EKS</li><li>Kyverno</li><li>Helm</li></ul>
         </a>
         <a class="card reveal" href="https://github.com/prmaddi6233/aws-aft-account-factory-blueprint" target="_blank" rel="noopener">
           <div class="card__icon">◆</div>
           <h3>aws-aft-account-factory-blueprint</h3>
           <p>Automated, secure, cost-aware AWS account vending with Control Tower + AFT — platform, governance, and FinOps in one blueprint.</p>
-          <ul class="tags mono"><li>Terraform</li><li>AFT</li><li>Control Tower</li></ul>
+          <ul class="tags"><li>Terraform</li><li>AFT</li><li>Control Tower</li></ul>
         </a>
         <a class="card reveal" href="https://github.com/prmaddi6233/eks-cost-optimization" target="_blank" rel="noopener">
           <div class="card__icon">◆</div>
           <h3>eks-cost-optimization</h3>
           <p>Karpenter Spot-first NodePools with consolidation, Graviton migration, recommendation-only VPA rightsizing, OpenCost vs. Kubecost with CUR net pricing.</p>
-          <ul class="tags mono"><li>Karpenter</li><li>Graviton</li><li>VPA</li></ul>
+          <ul class="tags"><li>Karpenter</li><li>Graviton</li><li>VPA</li></ul>
         </a>
       </div>
       <p class="work__more reveal"><a href="https://github.com/prmaddi6233?tab=repositories" target="_blank" rel="noopener">See all repositories on GitHub →</a></p>
@@ -258,17 +400,17 @@
         <a class="cert" href="https://www.credly.com/badges/5150b9c4-aa9b-4946-8fc0-c2c2fa3bfbb9" target="_blank" rel="noopener">
           <h3>CKA</h3>
           <p>Certified Kubernetes Administrator</p>
-          <span class="cert__verify mono">Verify on Credly ↗</span>
+          <span class="cert__verify">Verify on Credly ↗</span>
         </a>
         <a class="cert" href="https://verify.skilljar.com/c/kaqtuub8ax3j" target="_blank" rel="noopener">
           <h3>FinOps Certified Engineer</h3>
           <p>FinOps Foundation</p>
-          <span class="cert__verify mono">Verify certificate ↗</span>
+          <span class="cert__verify">Verify certificate ↗</span>
         </a>
-        <div class="cert cert--static">
+        <div class="cert">
           <h3>AWS Solutions Architect</h3>
           <p>Amazon Web Services · Associate</p>
-          <span class="cert__verify mono">AWS Certified</span>
+          <span class="cert__verify">AWS Certified</span>
         </div>
       </div>
     </section>
@@ -291,11 +433,113 @@
 
   </main>
 
-  <footer class="footer mono">
+  <footer class="footer">
     <span>Designed &amp; built by Pradeep Maddi</span>
     <span>Cloud Platform Engineer · FinOps</span>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script>
+  (function() {
+    // === Theme Toggle ===
+    const toggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const stored = localStorage.getItem('theme');
+    if (stored) {
+      html.setAttribute('data-theme', stored);
+      toggle.textContent = stored === 'light' ? '☀️' : '🌙';
+    }
+    toggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      toggle.textContent = next === 'light' ? '☀️' : '🌙';
+    });
+
+    // === Mobile Burger ===
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      burger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // === Scroll Reveal (IntersectionObserver) ===
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    reveals.forEach(el => revealObserver.observe(el));
+
+    // === Typing Animation ===
+    const typingEl = document.getElementById('typingText');
+    const text = 'evidence-based cloud platforms.';
+    let i = 0;
+    function typeChar() {
+      if (i < text.length) {
+        typingEl.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeChar, 60);
+      }
+    }
+    // Start typing when hero is visible
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(typeChar, 800);
+          heroObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    heroObserver.observe(document.querySelector('.hero'));
+
+    // === Animated Stats Counter ===
+    const statsSection = document.getElementById('statsSection');
+    let statsCounted = false;
+    function animateCounters() {
+      if (statsCounted) return;
+      statsCounted = true;
+      const nums = statsSection.querySelectorAll('.stat__num');
+      nums.forEach(num => {
+        const target = parseInt(num.getAttribute('data-target'));
+        const suffix = num.getAttribute('data-suffix') || '';
+        const duration = 2000;
+        const start = performance.now();
+        function update(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const current = Math.floor(eased * target);
+          num.textContent = current + suffix;
+          if (progress < 1) requestAnimationFrame(update);
+          else num.textContent = target + suffix;
+        }
+        requestAnimationFrame(update);
+      });
+    }
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    statsObserver.observe(statsSection);
+
+    // === Failsafe: show all reveals after 3s ===
+    setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(el => el.classList.add('visible'));
+    }, 3000);
+  })();
+  </script>
 </body>
 </html>
