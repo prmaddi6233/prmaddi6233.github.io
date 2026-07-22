@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pradeep Maddi | Cloud Platform Engineering &amp; FinOps</title>
+  <meta name="description" content="Pradeep Maddi — Cloud platform engineering and FinOps. I build evidence-based cloud platforms: deterministic checks, production metrics, canary validation."/>
+  <meta property="og:title" content="Pradeep Maddi | Cloud Platform Engineering &amp; FinOps"/>
+  <meta property="og:description" content="I build evidence-based cloud platforms — deterministic checks, production metrics, canary validation with automated rollback."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://prmaddi6233.github.io"/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a192f'/%3E%3Ctext x='50' y='68' font-size='48' font-family='monospace' fill='%2364ffda' text-anchor='middle'%3EPM%3C/text%3E%3C/svg%3E"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top" aria-label="Home">PM</a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about"><span>01.</span> About</a>
+      <a href="#projects"><span>02.</span> Projects</a>
+      <a href="#certifications"><span>03.</span> Certifications</a>
+      <a href="#contact"><span>04.</span> Contact</a>
+      <a class="btn btn--small" href="https://github.com/prmaddi6233" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <p class="hero__hello mono">Hi, my name is</p>
+      <h1 class="hero__name">Pradeep Maddi.</h1>
+      <h2 class="hero__tag">I build evidence-based cloud platforms.</h2>
+      <p class="hero__blurb">
+        I do platform engineering and FinOps on <strong>100+ account AWS Organizations</strong> —
+        account lifecycle automation, security baselines, and cost governance that
+        engineering teams actually trust. Cost recommendations rot in backlogs because
+        nobody proves they're safe; I build the evidence layer that does.
+      </p>
+      <a class="btn btn--big" href="https://github.com/prmaddi6233/cloud-finops-agent" target="_blank" rel="noopener">Check out cloud-finops-agent</a>
+    </section>
+
+    <!-- About -->
+    <section class="section reveal" id="about">
+      <h2 class="section__title"><span class="mono">01.</span> About Me</h2>
+      <div class="about">
+        <div class="about__text">
+          <p>
+            Every cloud platform tells you to resize your instances — none of them prove
+            it's safe. My work sits in that gap: <strong>deterministic checks</strong> where
+            math suffices, <strong>production metrics</strong> where it doesn't, and
+            <strong>canary validation with automated rollback</strong> where it matters.
+          </p>
+          <p>How I work:</p>
+          <ul class="about__principles">
+            <li>Decisions get written down — <em>"why not X"</em> beats <em>"how to X"</em></li>
+            <li>Guardrails live in config and policy engines, not runbooks</li>
+            <li>A safety claim that can't fail closed isn't a safety claim</li>
+          </ul>
+          <p>Technologies I work with daily:</p>
+          <ul class="about__skills mono">
+            <li>AWS Organizations</li>
+            <li>Kubernetes / EKS</li>
+            <li>Terraform</li>
+            <li>Python</li>
+            <li>Kyverno</li>
+            <li>GitHub Actions</li>
+            <li>Athena / FOCUS</li>
+            <li>Grafana</li>
+          </ul>
+        </div>
+        <div class="about__photo">
+          <div class="about__photo-frame mono">PM</div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      Experience section (tabbed) — enable when work history is provided.
+      <section class="section reveal" id="experience"> ... </section>
+    -->
+
+    <!-- Featured Projects -->
+    <section class="section reveal" id="projects">
+      <h2 class="section__title"><span class="mono">02.</span> Featured Projects</h2>
+
+      <div class="featured">
+        <div class="featured__image">
+          <a href="https://github.com/prmaddi6233/cloud-finops-agent" target="_blank" rel="noopener">
+            <img src="https://opengraph.githubassets.com/readme/prmaddi6233/cloud-finops-agent" alt="cloud-finops-agent repository card" loading="lazy"/>
+          </a>
+        </div>
+        <div class="featured__content">
+          <p class="mono featured__label">Flagship Project</p>
+          <h3><a href="https://github.com/prmaddi6233/cloud-finops-agent" target="_blank" rel="noopener">cloud-finops-agent</a></h3>
+          <div class="featured__card">
+            Evidence-based cloud cost optimization. Tiered validation — deterministic rules,
+            statistical analysis on real metrics, and production canaries with SLO-gated
+            automated rollback. Findings ship as SARIF into GitHub Code Scanning. Fail-closed
+            by design.
+          </div>
+          <p class="featured__adrs mono">
+            The judgment behind it:
+            <a href="https://github.com/prmaddi6233/cloud-finops-agent/blob/main/docs/adr/0001-why-we-dont-sandbox-benchmark.md" target="_blank" rel="noopener">no sandbox benchmarks</a> ·
+            <a href="https://github.com/prmaddi6233/cloud-finops-agent/blob/main/docs/adr/0002-agent-is-not-the-control-plane.md" target="_blank" rel="noopener">agent ≠ control plane</a> ·
+            <a href="https://github.com/prmaddi6233/cloud-finops-agent/blob/main/docs/adr/0003-tiered-validation-model.md" target="_blank" rel="noopener">tiered validation</a>
+          </p>
+          <ul class="featured__tech mono">
+            <li>Python</li><li>boto3</li><li>SARIF</li><li>GitHub Actions</li><li>OIDC</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="featured featured--reverse">
+        <div class="featured__image">
+          <a href="https://github.com/prmaddi6233/aws-platform-control-plane" target="_blank" rel="noopener">
+            <img src="https://opengraph.githubassets.com/readme/prmaddi6233/aws-platform-control-plane" alt="aws-platform-control-plane repository card" loading="lazy"/>
+          </a>
+        </div>
+        <div class="featured__content">
+          <p class="mono featured__label">Featured Project</p>
+          <h3><a href="https://github.com/prmaddi6233/aws-platform-control-plane" target="_blank" rel="noopener">aws-platform-control-plane</a></h3>
+          <div class="featured__card">
+            Self-service AWS account lifecycle control plane — policy-gated provisioning
+            and decommissioning, Step Functions orchestration, DynamoDB persistence,
+            least-privilege IAM, and a deterministic audit trail.
+          </div>
+          <ul class="featured__tech mono">
+            <li>Python</li><li>Step Functions</li><li>DynamoDB</li><li>IAM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="featured">
+        <div class="featured__image">
+          <a href="https://github.com/prmaddi6233/eks-cost-governance-toolkit" target="_blank" rel="noopener">
+            <img src="https://opengraph.githubassets.com/readme/prmaddi6233/eks-cost-governance-toolkit" alt="eks-cost-governance-toolkit repository card" loading="lazy"/>
+          </a>
+        </div>
+        <div class="featured__content">
+          <p class="mono featured__label">Featured Project</p>
+          <h3><a href="https://github.com/prmaddi6233/eks-cost-governance-toolkit" target="_blank" rel="noopener">eks-cost-governance-toolkit</a></h3>
+          <div class="featured__card">
+            Cost-aware, well-governed multi-tenant EKS — Kyverno policy-as-code guardrails,
+            budgeted team namespaces with ResourceQuota and LimitRange, and OpenCost.
+            Guardrails product teams don't have to think about.
+          </div>
+          <ul class="featured__tech mono">
+            <li>EKS</li><li>Kyverno</li><li>Helm</li><li>OpenCost</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="other__title">Other Noteworthy Projects</h3>
+      <div class="other">
+        <a class="other__card reveal" href="https://github.com/prmaddi6233/aws-aft-account-factory-blueprint" target="_blank" rel="noopener">
+          <div class="other__top">
+            <svg class="other__folder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h4>aws-aft-account-factory-blueprint</h4>
+          <p>Automated, secure, cost-aware AWS account vending with Control Tower + AFT — platform engineering, governance, and FinOps in one blueprint.</p>
+          <ul class="featured__tech mono"><li>Terraform</li><li>AFT</li><li>Control Tower</li></ul>
+        </a>
+        <a class="other__card reveal" href="https://github.com/prmaddi6233/eks-cost-optimization" target="_blank" rel="noopener">
+          <div class="other__top">
+            <svg class="other__folder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h4>eks-cost-optimization</h4>
+          <p>Karpenter Spot-first NodePools with consolidation, Graviton migration, recommendation-only VPA rightsizing, and OpenCost vs. Kubecost with CUR net pricing.</p>
+          <ul class="featured__tech mono"><li>Karpenter</li><li>Graviton</li><li>VPA</li></ul>
+        </a>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section reveal" id="certifications">
+      <h2 class="section__title"><span class="mono">03.</span> Certifications</h2>
+      <div class="certs">
+        <a class="certs__card" href="https://www.credly.com/badges/5150b9c4-aa9b-4946-8fc0-c2c2fa3bfbb9" target="_blank" rel="noopener">
+          <h4>CKA</h4>
+          <p>Certified Kubernetes Administrator</p>
+          <span class="mono">Verify on Credly ↗</span>
+        </a>
+        <a class="certs__card" href="https://verify.skilljar.com/c/kaqtuub8ax3j" target="_blank" rel="noopener">
+          <h4>FinOps Certified Engineer</h4>
+          <p>FinOps Foundation</p>
+          <span class="mono">Verify certificate ↗</span>
+        </a>
+        <div class="certs__card">
+          <h4>AWS Solutions Architect</h4>
+          <p>Amazon Web Services</p>
+          <span class="mono">Associate</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--center reveal" id="contact">
+      <p class="mono contact__label">04. What's Next?</p>
+      <h2 class="contact__title">Get In Touch</h2>
+      <p class="contact__blurb">
+        Whether it's platform engineering, FinOps, or an interesting problem in
+        cloud cost governance — my inbox is open.
+      </p>
+      <a class="btn btn--big" href="https://www.linkedin.com/in/pradeep-maddi" target="_blank" rel="noopener">Say Hello on LinkedIn</a>
+    </section>
+
+  </main>
+
+  <footer class="footer mono">
+    <a href="https://github.com/prmaddi6233/prmaddi6233.github.io" target="_blank" rel="noopener">Built by Pradeep Maddi</a>
+    <span class="footer__credit">Design inspired by <a href="https://brittanychiang.com" target="_blank" rel="noopener">Brittany Chiang</a></span>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
