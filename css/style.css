@@ -191,6 +191,50 @@ main { max-width: 1000px; margin: 0 auto; padding: 0 40px; }
 }
 .about__photo-frame:hover { transform: translate(-5px, -5px); box-shadow: 12px 12px 0 var(--accent-tint); }
 
+/* --- Experience (tabs) ----------------------------------------------------- */
+
+.tabs { display: grid; grid-template-columns: max-content 1fr; gap: 40px; min-height: 340px; }
+
+.tabs__list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-left: 2px solid var(--lightest-navy);
+}
+.tabs__tab {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.tabs__tab:hover { color: var(--accent); background: var(--accent-tint); }
+.tabs__tab.is-active { color: var(--accent); }
+.tabs__list::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 0;
+  width: 2px;
+  height: 45px;
+  background: var(--accent);
+  transform: translateY(calc(var(--tab-index, 0) * 45px));
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.tabs__panel h3 { color: var(--lightest-slate); font-size: 22px; font-weight: 600; }
+.tabs__company { color: var(--accent); }
+.tabs__range { color: var(--slate); font-size: 13px; margin: 4px 0 20px; }
+.tabs__bullets { list-style: none; }
+.tabs__bullets li { position: relative; padding-left: 26px; margin-bottom: 12px; color: var(--light-slate); font-size: 16px; }
+.tabs__bullets li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
+.tabs__panel[hidden] { display: none; }
+
 /* --- Featured projects ---------------------------------------------------- */
 
 .featured {
@@ -343,6 +387,23 @@ a.certs__card:hover h4 { color: var(--accent); }
   .about { grid-template-columns: 1fr; }
   .about__photo { order: -1; }
   .about__photo-frame { width: 200px; height: 200px; font-size: 60px; }
+
+  .tabs { grid-template-columns: 1fr; gap: 28px; }
+  .tabs__list {
+    flex-direction: row;
+    overflow-x: auto;
+    border-left: none;
+    border-bottom: 2px solid var(--lightest-navy);
+  }
+  .tabs__list::after {
+    top: auto;
+    bottom: -2px;
+    left: 0;
+    width: 120px;
+    height: 2px;
+    transform: translateX(calc(var(--tab-index, 0) * 120px));
+  }
+  .tabs__tab { width: 120px; text-align: center; flex: 0 0 auto; }
 
   .featured,
   .featured--reverse { display: block; position: relative; margin-bottom: 60px; }

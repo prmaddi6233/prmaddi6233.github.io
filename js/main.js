@@ -33,6 +33,39 @@
     })
   );
 
+  // --- Experience tabs ---
+  const tabList = document.querySelector(".tabs__list");
+  if (tabList) {
+    const tabs = Array.from(tabList.querySelectorAll(".tabs__tab"));
+    const panels = Array.from(document.querySelectorAll(".tabs__panel"));
+    const activate = (index) => {
+      tabs.forEach((tab, i) => {
+        const selected = i === index;
+        tab.classList.toggle("is-active", selected);
+        tab.setAttribute("aria-selected", String(selected));
+        panels[i].classList.toggle("is-active", selected);
+        panels[i].hidden = !selected;
+      });
+      tabList.style.setProperty("--tab-index", index);
+    };
+    tabs.forEach((tab, i) => {
+      tab.addEventListener("click", () => activate(i));
+      tab.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+          e.preventDefault();
+          const next = (i + 1) % tabs.length;
+          tabs[next].focus();
+          activate(next);
+        } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+          e.preventDefault();
+          const prev = (i - 1 + tabs.length) % tabs.length;
+          tabs[prev].focus();
+          activate(prev);
+        }
+      });
+    });
+  }
+
   // --- Nav hide on scroll down, show on scroll up ---
   const nav = document.getElementById("nav");
   let lastY = window.scrollY;

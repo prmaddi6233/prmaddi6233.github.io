@@ -21,9 +21,10 @@
     <a class="nav__logo" href="#top" aria-label="Home">PM</a>
     <nav class="nav__links" id="navLinks">
       <a href="#about"><span>01.</span> About</a>
-      <a href="#projects"><span>02.</span> Projects</a>
-      <a href="#certifications"><span>03.</span> Certifications</a>
-      <a href="#contact"><span>04.</span> Contact</a>
+      <a href="#experience"><span>02.</span> Experience</a>
+      <a href="#projects"><span>03.</span> Projects</a>
+      <a href="#certifications"><span>04.</span> Certifications</a>
+      <a href="#contact"><span>05.</span> Contact</a>
       <a class="btn btn--small" href="https://github.com/prmaddi6233" target="_blank" rel="noopener">GitHub</a>
     </nav>
     <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
@@ -39,8 +40,8 @@
       <h1 class="hero__name">Pradeep Maddi.</h1>
       <h2 class="hero__tag">I build evidence-based cloud platforms.</h2>
       <p class="hero__blurb">
-        I do platform engineering and FinOps on <strong>100+ account AWS Organizations</strong> —
-        account lifecycle automation, security baselines, and cost governance that
+        I do platform engineering and FinOps on <strong>multi-account AWS</strong> —
+        account lifecycle automation, Kubernetes at scale, and cost governance that
         engineering teams actually trust. Cost recommendations rot in backlogs because
         nobody proves they're safe; I build the evidence layer that does.
       </p>
@@ -82,14 +83,83 @@
       </div>
     </section>
 
-    <!--
-      Experience section (tabbed) — enable when work history is provided.
-      <section class="section reveal" id="experience"> ... </section>
-    -->
+    <!-- Experience -->
+    <section class="section reveal" id="experience">
+      <h2 class="section__title"><span class="mono">02.</span> Where I've Worked</h2>
+      <div class="tabs">
+        <div class="tabs__list" role="tablist" aria-label="Companies">
+          <button class="tabs__tab is-active" role="tab" aria-selected="true" id="tab-0" aria-controls="panel-0">Pollard Banknote</button>
+          <button class="tabs__tab" role="tab" aria-selected="false" id="tab-1" aria-controls="panel-1">Viasat</button>
+          <button class="tabs__tab" role="tab" aria-selected="false" id="tab-2" aria-controls="panel-2">Inmarsat</button>
+          <button class="tabs__tab" role="tab" aria-selected="false" id="tab-3" aria-controls="panel-3">Cisco</button>
+          <button class="tabs__tab" role="tab" aria-selected="false" id="tab-4" aria-controls="panel-4">Lotus Info Tech</button>
+        </div>
+
+        <div class="tabs__panels">
+          <div class="tabs__panel is-active" role="tabpanel" id="panel-0" aria-labelledby="tab-0">
+            <h3>Cloud Platform Engineer <span class="tabs__company">@ Pollard Banknote</span></h3>
+            <p class="tabs__range mono">May 2024 – Present · Winnipeg, Canada (Remote)</p>
+            <ul class="tabs__bullets">
+              <li>Designed and implemented scalable cloud platforms on AWS and Kubernetes to support high-performance workloads.</li>
+              <li>Established FinOps practices to optimize cloud costs — improving spend visibility and rolling out cost-allocation strategies across departments.</li>
+              <li>Built custom dashboards over CUR Legacy, FOCUS, and CUR 2.0 datasets to surface utilization and financial metrics as actionable insight for stakeholders.</li>
+              <li>Automated resource provisioning with Terraform, reducing deployment time by 70%.</li>
+              <li>Aligned cloud spend with business objectives alongside cross-functional teams, achieving a 20% monthly cost reduction through reserved-capacity planning and right-sizing.</li>
+              <li>Conducted Well-Architected Reviews for cost optimization, security, and reliability.</li>
+            </ul>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1" hidden>
+            <h3>Cloud Engineer <span class="tabs__company">@ Viasat</span></h3>
+            <p class="tabs__range mono">May 2023 – Nov 2023 · St. John's, Canada (Hybrid)</p>
+            <ul class="tabs__bullets">
+              <li>Automated infrastructure creation with Jenkins jobs driving Terraform scripts and modules, cutting deployment time by 80%.</li>
+              <li>Configured IAM groups and users to strengthen authentication, reducing unauthorized access attempts by 30%.</li>
+              <li>Configured and optimized Kubernetes components — Services, Volumes, Ingress, ConfigMaps, and Secrets — reducing deployment time by 20%.</li>
+              <li>Implemented reproducible build processes for Kubernetes applications, reducing build errors by 30%.</li>
+            </ul>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
+            <h3>Cloud Engineer <span class="tabs__company">@ Inmarsat</span></h3>
+            <p class="tabs__range mono">Aug 2021 – May 2023 · St. John's, Canada (Remote)</p>
+            <ul class="tabs__bullets">
+              <li>Implemented monitoring across all cloud installations, decreasing downtime by 20% and improving overall reliability.</li>
+              <li>Optimized AWS cost efficiency by analyzing usage patterns and adopting reserved instances, reducing monthly spend by $10,000.</li>
+              <li>Optimized tenant-specific costs through cost-allocation strategies, saving 15% in revenue.</li>
+              <li>Automated provisioning and management of AWS infrastructure with CloudFormation and Terraform, cutting manual effort by 80%.</li>
+              <li>Built custom Kibana dashboards and visualizations, reducing troubleshooting time by 40%.</li>
+            </ul>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden>
+            <h3>Cloud Engineer <span class="tabs__company">@ Cisco</span></h3>
+            <p class="tabs__range mono">Nov 2019 – Mar 2021 · Kanata, Canada (Remote)</p>
+            <ul class="tabs__bullets">
+              <li>Implemented performance optimization with CloudWatch alerts, reducing resource utilization and saving $50,000 per month.</li>
+              <li>Integrated Okta Single Sign-On across 20+ applications, reducing user login time by 40%.</li>
+              <li>Implemented data-protection security measures — IAM, Network Security Groups, and encryption at rest and in transit.</li>
+              <li>Designed scalable infrastructure-as-code with Bamboo and Jenkins, decreasing provisioning time by 50%.</li>
+            </ul>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-4" aria-labelledby="tab-4" hidden>
+            <h3>Linux System Administrator <span class="tabs__company">@ Lotus Info Tech</span></h3>
+            <p class="tabs__range mono">May 2017 – Apr 2019 · Hyderabad, India (Remote)</p>
+            <ul class="tabs__bullets">
+              <li>Administered 20+ UNIX/Linux servers, applying patches and updates via Red Hat Satellite, YUM, and RPM.</li>
+              <li>Managed Linux accounts for 20,000+ users — permissions, access controls, and activity monitoring.</li>
+              <li>Developed automated maintenance scripts, saving ~15 hours per week of manual administration.</li>
+              <li>Ran regular security audits and patching for compliance, reducing data-breach risk by 40%.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Featured Projects -->
     <section class="section reveal" id="projects">
-      <h2 class="section__title"><span class="mono">02.</span> Featured Projects</h2>
+      <h2 class="section__title"><span class="mono">03.</span> Featured Projects</h2>
 
       <div class="featured">
         <div class="featured__image">
@@ -181,7 +251,7 @@
 
     <!-- Certifications -->
     <section class="section reveal" id="certifications">
-      <h2 class="section__title"><span class="mono">03.</span> Certifications</h2>
+      <h2 class="section__title"><span class="mono">04.</span> Certifications</h2>
       <div class="certs">
         <a class="certs__card" href="https://www.credly.com/badges/5150b9c4-aa9b-4946-8fc0-c2c2fa3bfbb9" target="_blank" rel="noopener">
           <h4>CKA</h4>
@@ -203,7 +273,7 @@
 
     <!-- Contact -->
     <section class="section section--center reveal" id="contact">
-      <p class="mono contact__label">04. What's Next?</p>
+      <p class="mono contact__label">05. What's Next?</p>
       <h2 class="contact__title">Get In Touch</h2>
       <p class="contact__blurb">
         Whether it's platform engineering, FinOps, or an interesting problem in
