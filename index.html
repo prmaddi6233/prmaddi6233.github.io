@@ -1,292 +1,297 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pradeep Maddi | Cloud Platform Engineering &amp; FinOps</title>
-  <meta name="description" content="Pradeep Maddi — Cloud platform engineering and FinOps. I build evidence-based cloud platforms: deterministic checks, production metrics, canary validation."/>
-  <meta property="og:title" content="Pradeep Maddi | Cloud Platform Engineering &amp; FinOps"/>
-  <meta property="og:description" content="I build evidence-based cloud platforms — deterministic checks, production metrics, canary validation with automated rollback."/>
+  <title>Pradeep Maddi | Cloud Platform Engineer &amp; FinOps</title>
+  <meta name="description" content="Pradeep Maddi — Cloud Platform Engineer and FinOps practitioner running a 150+ account AWS Organization. I build evidence-based cloud platforms."/>
+  <meta property="og:title" content="Pradeep Maddi | Cloud Platform Engineer &amp; FinOps"/>
+  <meta property="og:description" content="Cloud Platform Engineer & FinOps — 150+ account AWS Organization. I build evidence-based cloud platforms."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://prmaddi6233.github.io"/>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a192f'/%3E%3Ctext x='50' y='68' font-size='48' font-family='monospace' fill='%2364ffda' text-anchor='middle'%3EPM%3C/text%3E%3C/svg%3E"/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b1120'/%3E%3Ctext x='50' y='68' font-size='46' font-family='monospace' font-weight='bold' fill='%2338bdf8' text-anchor='middle'%3EPM%3C/text%3E%3C/svg%3E"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css"/>
+  <script>
+    // Enable JS-only reveal styles, with a hard failsafe so content can never
+    // stay hidden if main.js fails to load.
+    document.documentElement.className = "js";
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        var els = document.querySelectorAll(".reveal:not(.visible)");
+        for (var i = 0; i < els.length; i++) els[i].classList.add("visible");
+      }, 2500);
+    });
+  </script>
 </head>
 <body>
 
+  <!-- Nav -->
   <header class="nav" id="nav">
-    <a class="nav__logo" href="#top" aria-label="Home">PM</a>
-    <nav class="nav__links" id="navLinks">
-      <a href="#about"><span>01.</span> About</a>
-      <a href="#experience"><span>02.</span> Experience</a>
-      <a href="#projects"><span>03.</span> Projects</a>
-      <a href="#certifications"><span>04.</span> Certifications</a>
-      <a href="#contact"><span>05.</span> Contact</a>
-      <a class="btn btn--small" href="https://github.com/prmaddi6233" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-    <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav__inner">
+      <a class="nav__logo" href="#top" aria-label="Home">PM</a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Work</a>
+        <a href="#certs">Certifications</a>
+        <a class="nav__cta" href="#contact">Contact</a>
+      </nav>
+      <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <main id="top">
 
     <!-- Hero -->
     <section class="hero">
-      <p class="hero__hello mono">Hi, my name is</p>
-      <h1 class="hero__name">Pradeep Maddi.</h1>
-      <h2 class="hero__tag">I build evidence-based cloud platforms.</h2>
-      <p class="hero__blurb">
-        I do platform engineering and FinOps on a <strong>150+ account AWS Organization</strong> —
-        account lifecycle automation, Kubernetes at scale, and cost governance that
-        engineering teams actually trust. Cost recommendations rot in backlogs because
-        nobody proves they're safe; I build the evidence layer that does.
-      </p>
-      <a class="btn btn--big" href="https://github.com/prmaddi6233/cloud-finops-agent" target="_blank" rel="noopener">Check out cloud-finops-agent</a>
+      <div class="hero__inner">
+        <p class="eyebrow reveal">Cloud Platform Engineer · FinOps</p>
+        <h1 class="hero__name reveal">Pradeep Maddi</h1>
+        <h2 class="hero__tag reveal">I build <span class="grad">evidence-based cloud platforms.</span></h2>
+        <p class="hero__blurb reveal">
+          I run platform engineering and FinOps on a <strong>150+ account AWS Organization</strong> —
+          account lifecycle automation, Kubernetes at scale, and cost governance engineering
+          teams actually trust. Cost recommendations rot in backlogs because nobody proves
+          they're safe; I build the evidence layer that does.
+        </p>
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary" href="#work">View my work</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/pradeep-maddi" target="_blank" rel="noopener">Get in touch</a>
+        </div>
+        <div class="stats reveal">
+          <div class="stat"><span class="stat__num grad">150+</span><span class="stat__label">AWS accounts</span></div>
+          <div class="stat"><span class="stat__num grad">8+</span><span class="stat__label">Years in cloud</span></div>
+          <div class="stat"><span class="stat__num grad">5</span><span class="stat__label">Companies</span></div>
+          <div class="stat"><span class="stat__num grad">3</span><span class="stat__label">Certifications</span></div>
+        </div>
+      </div>
     </section>
 
     <!-- About -->
-    <section class="section reveal" id="about">
-      <h2 class="section__title"><span class="mono">01.</span> About Me</h2>
-      <div class="about">
+    <section class="section" id="about">
+      <div class="section__head reveal">
+        <span class="section__index">01</span>
+        <h2 class="section__title">About</h2>
+      </div>
+      <div class="about reveal">
         <div class="about__text">
           <p>
             Every cloud platform tells you to resize your instances — none of them prove
-            it's safe. My work sits in that gap: <strong>deterministic checks</strong> where
+            it's safe. My work lives in that gap: <strong>deterministic checks</strong> where
             math suffices, <strong>production metrics</strong> where it doesn't, and
             <strong>canary validation with automated rollback</strong> where it matters.
           </p>
-          <p>How I work:</p>
+          <p>A few principles I hold to:</p>
           <ul class="about__principles">
             <li>Decisions get written down — <em>"why not X"</em> beats <em>"how to X"</em></li>
             <li>Guardrails live in config and policy engines, not runbooks</li>
             <li>A safety claim that can't fail closed isn't a safety claim</li>
           </ul>
-          <p>Technologies I work with daily:</p>
-          <ul class="about__skills mono">
-            <li>AWS Organizations</li>
-            <li>Kubernetes / EKS</li>
-            <li>Terraform</li>
-            <li>Python</li>
-            <li>Kyverno</li>
-            <li>GitHub Actions</li>
-            <li>Athena / FOCUS</li>
-            <li>Grafana</li>
-          </ul>
         </div>
-        <div class="about__photo">
-          <div class="about__photo-frame mono">PM</div>
-        </div>
+        <aside class="about__skills">
+          <h3>Toolbox</h3>
+          <div class="chips">
+            <span class="chip-group">Platform</span>
+            <span class="chip">AWS Organizations</span>
+            <span class="chip">Control Tower / AFT</span>
+            <span class="chip">EKS / Kubernetes</span>
+            <span class="chip chip-group">IaC &amp; CI/CD</span>
+            <span class="chip">Terraform</span>
+            <span class="chip">GitHub Actions</span>
+            <span class="chip">Kyverno</span>
+            <span class="chip">Helm</span>
+            <span class="chip chip-group">FinOps &amp; Data</span>
+            <span class="chip">FOCUS / CUR 2.0</span>
+            <span class="chip">Athena</span>
+            <span class="chip">Grafana</span>
+            <span class="chip chip-group">Languages</span>
+            <span class="chip">Python</span>
+            <span class="chip">Bash</span>
+          </div>
+        </aside>
       </div>
     </section>
 
     <!-- Experience -->
-    <section class="section reveal" id="experience">
-      <h2 class="section__title"><span class="mono">02.</span> Where I've Worked</h2>
-      <div class="tabs">
-        <div class="tabs__list" role="tablist" aria-label="Companies">
-          <button class="tabs__tab is-active" role="tab" aria-selected="true" id="tab-0" aria-controls="panel-0">Pollard Banknote</button>
-          <button class="tabs__tab" role="tab" aria-selected="false" id="tab-1" aria-controls="panel-1">Viasat</button>
-          <button class="tabs__tab" role="tab" aria-selected="false" id="tab-2" aria-controls="panel-2">Inmarsat</button>
-          <button class="tabs__tab" role="tab" aria-selected="false" id="tab-3" aria-controls="panel-3">Cisco</button>
-          <button class="tabs__tab" role="tab" aria-selected="false" id="tab-4" aria-controls="panel-4">Lotus Info Tech</button>
-        </div>
-
-        <div class="tabs__panels">
-          <div class="tabs__panel is-active" role="tabpanel" id="panel-0" aria-labelledby="tab-0">
-            <h3>Cloud Platform Engineer <span class="tabs__company">@ Pollard Banknote</span></h3>
-            <p class="tabs__range mono">May 2024 – Present · Winnipeg, Canada (Remote)</p>
-            <ul class="tabs__bullets">
+    <section class="section" id="experience">
+      <div class="section__head reveal">
+        <span class="section__index">02</span>
+        <h2 class="section__title">Experience</h2>
+      </div>
+      <div class="timeline">
+        <article class="tl reveal">
+          <div class="tl__dot"></div>
+          <div class="tl__body">
+            <div class="tl__meta"><span class="tl__date mono">May 2024 — Present</span><span class="tl__loc mono">Winnipeg, CA · Remote</span></div>
+            <h3 class="tl__role">Cloud Platform Engineer <span class="tl__at">· Pollard Banknote</span></h3>
+            <ul class="tl__points">
               <li>Operate platform engineering and FinOps across a <strong>150+ account AWS Organization</strong> serving high-performance workloads on AWS and Kubernetes.</li>
-              <li>Established FinOps practices to optimize cloud costs — improving spend visibility and rolling out cost-allocation strategies across departments.</li>
-              <li>Built custom dashboards over CUR Legacy, FOCUS, and CUR 2.0 datasets to surface utilization and financial metrics as actionable insight for stakeholders.</li>
-              <li>Automated resource provisioning with Terraform, reducing deployment time by 70%.</li>
-              <li>Aligned cloud spend with business objectives alongside cross-functional teams, achieving a 20% monthly cost reduction through reserved-capacity planning and right-sizing.</li>
-              <li>Conducted Well-Architected Reviews for cost optimization, security, and reliability.</li>
+              <li>Established FinOps practices — spend visibility and cross-department cost-allocation strategies.</li>
+              <li>Built dashboards over CUR Legacy, FOCUS, and CUR 2.0 to turn utilization and cost into actionable insight.</li>
+              <li>Automated provisioning with Terraform, cutting deployment time 70%; drove a 20% monthly cost reduction via reserved capacity and right-sizing.</li>
             </ul>
           </div>
-
-          <div class="tabs__panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1" hidden>
-            <h3>Cloud Engineer <span class="tabs__company">@ Viasat</span></h3>
-            <p class="tabs__range mono">May 2023 – Nov 2023 · St. John's, Canada (Hybrid)</p>
-            <ul class="tabs__bullets">
-              <li>Automated infrastructure creation with Jenkins jobs driving Terraform scripts and modules, cutting deployment time by 80%.</li>
-              <li>Configured IAM groups and users to strengthen authentication, reducing unauthorized access attempts by 30%.</li>
-              <li>Configured and optimized Kubernetes components — Services, Volumes, Ingress, ConfigMaps, and Secrets — reducing deployment time by 20%.</li>
-              <li>Implemented reproducible build processes for Kubernetes applications, reducing build errors by 30%.</li>
+        </article>
+        <article class="tl reveal">
+          <div class="tl__dot"></div>
+          <div class="tl__body">
+            <div class="tl__meta"><span class="tl__date mono">May 2023 — Nov 2023</span><span class="tl__loc mono">St. John's, CA · Hybrid</span></div>
+            <h3 class="tl__role">Cloud Engineer <span class="tl__at">· Viasat</span></h3>
+            <ul class="tl__points">
+              <li>Automated infrastructure with Jenkins + Terraform, reducing deployment time 80%.</li>
+              <li>Hardened auth with IAM groups and users, cutting unauthorized access attempts 30%.</li>
+              <li>Optimized Kubernetes components (Services, Ingress, ConfigMaps, Secrets) and reproducible builds — 30% fewer build errors.</li>
             </ul>
           </div>
-
-          <div class="tabs__panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
-            <h3>Cloud Engineer <span class="tabs__company">@ Inmarsat</span></h3>
-            <p class="tabs__range mono">Aug 2021 – May 2023 · St. John's, Canada (Remote)</p>
-            <ul class="tabs__bullets">
-              <li>Implemented monitoring across all cloud installations, decreasing downtime by 20% and improving overall reliability.</li>
-              <li>Optimized AWS cost efficiency by analyzing usage patterns and adopting reserved instances, reducing monthly spend by $10,000.</li>
-              <li>Optimized tenant-specific costs through cost-allocation strategies, saving 15% in revenue.</li>
-              <li>Automated provisioning and management of AWS infrastructure with CloudFormation and Terraform, cutting manual effort by 80%.</li>
-              <li>Built custom Kibana dashboards and visualizations, reducing troubleshooting time by 40%.</li>
+        </article>
+        <article class="tl reveal">
+          <div class="tl__dot"></div>
+          <div class="tl__body">
+            <div class="tl__meta"><span class="tl__date mono">Aug 2021 — May 2023</span><span class="tl__loc mono">St. John's, CA · Remote</span></div>
+            <h3 class="tl__role">Cloud Engineer <span class="tl__at">· Inmarsat</span></h3>
+            <ul class="tl__points">
+              <li>Optimized AWS cost efficiency with usage analysis and reserved instances — $10,000/month saved.</li>
+              <li>Implemented monitoring across all cloud installations, decreasing downtime 20%.</li>
+              <li>Automated AWS provisioning with CloudFormation and Terraform, cutting manual effort 80%; built Kibana dashboards that cut troubleshooting 40%.</li>
             </ul>
           </div>
-
-          <div class="tabs__panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden>
-            <h3>Cloud Engineer <span class="tabs__company">@ Cisco</span></h3>
-            <p class="tabs__range mono">Nov 2019 – Mar 2021 · Kanata, Canada (Remote)</p>
-            <ul class="tabs__bullets">
-              <li>Implemented performance optimization with CloudWatch alerts, reducing resource utilization and saving $50,000 per month.</li>
-              <li>Integrated Okta Single Sign-On across 20+ applications, reducing user login time by 40%.</li>
-              <li>Implemented data-protection security measures — IAM, Network Security Groups, and encryption at rest and in transit.</li>
-              <li>Designed scalable infrastructure-as-code with Bamboo and Jenkins, decreasing provisioning time by 50%.</li>
+        </article>
+        <article class="tl reveal">
+          <div class="tl__dot"></div>
+          <div class="tl__body">
+            <div class="tl__meta"><span class="tl__date mono">Nov 2019 — Mar 2021</span><span class="tl__loc mono">Kanata, CA · Remote</span></div>
+            <h3 class="tl__role">Cloud Engineer <span class="tl__at">· Cisco</span></h3>
+            <ul class="tl__points">
+              <li>Performance optimization via CloudWatch alerts — $50,000/month in savings.</li>
+              <li>Integrated Okta SSO across 20+ applications, cutting login time 40%.</li>
+              <li>Built scalable IaC with Bamboo and Jenkins, decreasing provisioning time 50%.</li>
             </ul>
           </div>
-
-          <div class="tabs__panel" role="tabpanel" id="panel-4" aria-labelledby="tab-4" hidden>
-            <h3>Linux System Administrator <span class="tabs__company">@ Lotus Info Tech</span></h3>
-            <p class="tabs__range mono">May 2017 – Apr 2019 · Hyderabad, India (Remote)</p>
-            <ul class="tabs__bullets">
-              <li>Administered 20+ UNIX/Linux servers, applying patches and updates via Red Hat Satellite, YUM, and RPM.</li>
-              <li>Managed Linux accounts for 20,000+ users — permissions, access controls, and activity monitoring.</li>
-              <li>Developed automated maintenance scripts, saving ~15 hours per week of manual administration.</li>
-              <li>Ran regular security audits and patching for compliance, reducing data-breach risk by 40%.</li>
+        </article>
+        <article class="tl reveal">
+          <div class="tl__dot"></div>
+          <div class="tl__body">
+            <div class="tl__meta"><span class="tl__date mono">May 2017 — Apr 2019</span><span class="tl__loc mono">Hyderabad, IN · Remote</span></div>
+            <h3 class="tl__role">Linux System Administrator <span class="tl__at">· Lotus Info Tech</span></h3>
+            <ul class="tl__points">
+              <li>Administered 20+ UNIX/Linux servers (Red Hat Satellite, YUM, RPM) and 20,000+ user accounts.</li>
+              <li>Automated maintenance scripts saving ~15 hours/week; ran security audits reducing breach risk 40%.</li>
             </ul>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <!-- Featured Projects -->
-    <section class="section reveal" id="projects">
-      <h2 class="section__title"><span class="mono">03.</span> Featured Projects</h2>
+    <!-- Work -->
+    <section class="section" id="work">
+      <div class="section__head reveal">
+        <span class="section__index">03</span>
+        <h2 class="section__title">Selected Work</h2>
+      </div>
 
-      <div class="featured">
-        <div class="featured__image">
-          <a href="https://github.com/prmaddi6233/cloud-finops-agent" target="_blank" rel="noopener">
-            <img src="https://opengraph.githubassets.com/readme/prmaddi6233/cloud-finops-agent" alt="cloud-finops-agent repository card" loading="lazy"/>
-          </a>
-        </div>
-        <div class="featured__content">
-          <p class="mono featured__label">Flagship Project</p>
+      <article class="spotlight reveal">
+        <a class="spotlight__media" href="https://github.com/prmaddi6233/cloud-finops-agent" target="_blank" rel="noopener">
+          <img src="https://opengraph.githubassets.com/readme/prmaddi6233/cloud-finops-agent" alt="cloud-finops-agent" loading="lazy"/>
+        </a>
+        <div class="spotlight__body">
+          <p class="eyebrow">Flagship · Open Source</p>
           <h3><a href="https://github.com/prmaddi6233/cloud-finops-agent" target="_blank" rel="noopener">cloud-finops-agent</a></h3>
-          <div class="featured__card">
+          <p>
             Evidence-based cloud cost optimization. Tiered validation — deterministic rules,
             statistical analysis on real metrics, and production canaries with SLO-gated
             automated rollback. Findings ship as SARIF into GitHub Code Scanning. Fail-closed
             by design.
-          </div>
-          <p class="featured__adrs mono">
-            The judgment behind it:
-            <a href="https://github.com/prmaddi6233/cloud-finops-agent/blob/main/docs/adr/0001-why-we-dont-sandbox-benchmark.md" target="_blank" rel="noopener">no sandbox benchmarks</a> ·
-            <a href="https://github.com/prmaddi6233/cloud-finops-agent/blob/main/docs/adr/0002-agent-is-not-the-control-plane.md" target="_blank" rel="noopener">agent ≠ control plane</a> ·
-            <a href="https://github.com/prmaddi6233/cloud-finops-agent/blob/main/docs/adr/0003-tiered-validation-model.md" target="_blank" rel="noopener">tiered validation</a>
           </p>
-          <ul class="featured__tech mono">
-            <li>Python</li><li>boto3</li><li>SARIF</li><li>GitHub Actions</li><li>OIDC</li>
-          </ul>
+          <p class="spotlight__adrs mono">
+            The judgment behind it —
+            <a href="https://github.com/prmaddi6233/cloud-finops-agent/blob/main/docs/adr/0001-why-we-dont-sandbox-benchmark.md" target="_blank" rel="noopener">no sandbox benchmarks</a>,
+            <a href="https://github.com/prmaddi6233/cloud-finops-agent/blob/main/docs/adr/0002-agent-is-not-the-control-plane.md" target="_blank" rel="noopener">agent ≠ control plane</a>,
+            <a href="https://github.com/prmaddi6233/cloud-finops-agent/blob/main/docs/adr/0003-tiered-validation-model.md" target="_blank" rel="noopener">tiered validation</a>.
+          </p>
+          <ul class="tags mono"><li>Python</li><li>boto3</li><li>SARIF</li><li>GitHub Actions</li><li>OIDC</li></ul>
         </div>
-      </div>
+      </article>
 
-      <div class="featured featured--reverse">
-        <div class="featured__image">
-          <a href="https://github.com/prmaddi6233/aws-platform-control-plane" target="_blank" rel="noopener">
-            <img src="https://opengraph.githubassets.com/readme/prmaddi6233/aws-platform-control-plane" alt="aws-platform-control-plane repository card" loading="lazy"/>
-          </a>
-        </div>
-        <div class="featured__content">
-          <p class="mono featured__label">Featured Project</p>
-          <h3><a href="https://github.com/prmaddi6233/aws-platform-control-plane" target="_blank" rel="noopener">aws-platform-control-plane</a></h3>
-          <div class="featured__card">
-            Self-service AWS account lifecycle control plane — policy-gated provisioning
-            and decommissioning, Step Functions orchestration, DynamoDB persistence,
-            least-privilege IAM, and a deterministic audit trail.
-          </div>
-          <ul class="featured__tech mono">
-            <li>Python</li><li>Step Functions</li><li>DynamoDB</li><li>IAM</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="featured">
-        <div class="featured__image">
-          <a href="https://github.com/prmaddi6233/eks-cost-governance-toolkit" target="_blank" rel="noopener">
-            <img src="https://opengraph.githubassets.com/readme/prmaddi6233/eks-cost-governance-toolkit" alt="eks-cost-governance-toolkit repository card" loading="lazy"/>
-          </a>
-        </div>
-        <div class="featured__content">
-          <p class="mono featured__label">Featured Project</p>
-          <h3><a href="https://github.com/prmaddi6233/eks-cost-governance-toolkit" target="_blank" rel="noopener">eks-cost-governance-toolkit</a></h3>
-          <div class="featured__card">
-            Cost-aware, well-governed multi-tenant EKS — Kyverno policy-as-code guardrails,
-            budgeted team namespaces with ResourceQuota and LimitRange, and OpenCost.
-            Guardrails product teams don't have to think about.
-          </div>
-          <ul class="featured__tech mono">
-            <li>EKS</li><li>Kyverno</li><li>Helm</li><li>OpenCost</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3 class="other__title">Other Noteworthy Projects</h3>
-      <div class="other">
-        <a class="other__card reveal" href="https://github.com/prmaddi6233/aws-aft-account-factory-blueprint" target="_blank" rel="noopener">
-          <div class="other__top">
-            <svg class="other__folder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <h4>aws-aft-account-factory-blueprint</h4>
-          <p>Automated, secure, cost-aware AWS account vending with Control Tower + AFT — platform engineering, governance, and FinOps in one blueprint.</p>
-          <ul class="featured__tech mono"><li>Terraform</li><li>AFT</li><li>Control Tower</li></ul>
+      <div class="cards">
+        <a class="card reveal" href="https://github.com/prmaddi6233/aws-platform-control-plane" target="_blank" rel="noopener">
+          <div class="card__icon">◆</div>
+          <h3>aws-platform-control-plane</h3>
+          <p>Self-service account lifecycle — policy-gated provisioning and decommissioning, Step Functions orchestration, least-privilege IAM, deterministic audit trail.</p>
+          <ul class="tags mono"><li>Python</li><li>Step Functions</li><li>DynamoDB</li></ul>
         </a>
-        <a class="other__card reveal" href="https://github.com/prmaddi6233/eks-cost-optimization" target="_blank" rel="noopener">
-          <div class="other__top">
-            <svg class="other__folder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <h4>eks-cost-optimization</h4>
-          <p>Karpenter Spot-first NodePools with consolidation, Graviton migration, recommendation-only VPA rightsizing, and OpenCost vs. Kubecost with CUR net pricing.</p>
-          <ul class="featured__tech mono"><li>Karpenter</li><li>Graviton</li><li>VPA</li></ul>
+        <a class="card reveal" href="https://github.com/prmaddi6233/eks-cost-governance-toolkit" target="_blank" rel="noopener">
+          <div class="card__icon">◆</div>
+          <h3>eks-cost-governance-toolkit</h3>
+          <p>Multi-tenant EKS guardrails — Kyverno policy-as-code, budgeted namespaces with ResourceQuota and LimitRange, and OpenCost.</p>
+          <ul class="tags mono"><li>EKS</li><li>Kyverno</li><li>Helm</li></ul>
+        </a>
+        <a class="card reveal" href="https://github.com/prmaddi6233/aws-aft-account-factory-blueprint" target="_blank" rel="noopener">
+          <div class="card__icon">◆</div>
+          <h3>aws-aft-account-factory-blueprint</h3>
+          <p>Automated, secure, cost-aware AWS account vending with Control Tower + AFT — platform, governance, and FinOps in one blueprint.</p>
+          <ul class="tags mono"><li>Terraform</li><li>AFT</li><li>Control Tower</li></ul>
+        </a>
+        <a class="card reveal" href="https://github.com/prmaddi6233/eks-cost-optimization" target="_blank" rel="noopener">
+          <div class="card__icon">◆</div>
+          <h3>eks-cost-optimization</h3>
+          <p>Karpenter Spot-first NodePools with consolidation, Graviton migration, recommendation-only VPA rightsizing, OpenCost vs. Kubecost with CUR net pricing.</p>
+          <ul class="tags mono"><li>Karpenter</li><li>Graviton</li><li>VPA</li></ul>
         </a>
       </div>
+      <p class="work__more reveal"><a href="https://github.com/prmaddi6233?tab=repositories" target="_blank" rel="noopener">See all repositories on GitHub →</a></p>
     </section>
 
     <!-- Certifications -->
-    <section class="section reveal" id="certifications">
-      <h2 class="section__title"><span class="mono">04.</span> Certifications</h2>
-      <div class="certs">
-        <a class="certs__card" href="https://www.credly.com/badges/5150b9c4-aa9b-4946-8fc0-c2c2fa3bfbb9" target="_blank" rel="noopener">
-          <h4>CKA</h4>
+    <section class="section" id="certs">
+      <div class="section__head reveal">
+        <span class="section__index">04</span>
+        <h2 class="section__title">Certifications</h2>
+      </div>
+      <div class="certs reveal">
+        <a class="cert" href="https://www.credly.com/badges/5150b9c4-aa9b-4946-8fc0-c2c2fa3bfbb9" target="_blank" rel="noopener">
+          <h3>CKA</h3>
           <p>Certified Kubernetes Administrator</p>
-          <span class="mono">Verify on Credly ↗</span>
+          <span class="cert__verify mono">Verify on Credly ↗</span>
         </a>
-        <a class="certs__card" href="https://verify.skilljar.com/c/kaqtuub8ax3j" target="_blank" rel="noopener">
-          <h4>FinOps Certified Engineer</h4>
+        <a class="cert" href="https://verify.skilljar.com/c/kaqtuub8ax3j" target="_blank" rel="noopener">
+          <h3>FinOps Certified Engineer</h3>
           <p>FinOps Foundation</p>
-          <span class="mono">Verify certificate ↗</span>
+          <span class="cert__verify mono">Verify certificate ↗</span>
         </a>
-        <div class="certs__card">
-          <h4>AWS Solutions Architect</h4>
-          <p>Amazon Web Services</p>
-          <span class="mono">Associate</span>
+        <div class="cert cert--static">
+          <h3>AWS Solutions Architect</h3>
+          <p>Amazon Web Services · Associate</p>
+          <span class="cert__verify mono">AWS Certified</span>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section class="section section--center reveal" id="contact">
-      <p class="mono contact__label">05. What's Next?</p>
-      <h2 class="contact__title">Get In Touch</h2>
-      <p class="contact__blurb">
-        Whether it's platform engineering, FinOps, or an interesting problem in
-        cloud cost governance — my inbox is open.
-      </p>
-      <a class="btn btn--big" href="https://www.linkedin.com/in/pradeep-maddi" target="_blank" rel="noopener">Say Hello on LinkedIn</a>
+    <section class="section contact" id="contact">
+      <div class="reveal">
+        <span class="eyebrow">05 · What's next</span>
+        <h2 class="contact__title">Let's build something reliable.</h2>
+        <p class="contact__blurb">
+          Whether it's platform engineering, FinOps, or an interesting problem in cloud
+          cost governance — my inbox is open.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="https://www.linkedin.com/in/pradeep-maddi" target="_blank" rel="noopener">Say hello on LinkedIn</a>
+          <a class="btn btn--ghost" href="https://github.com/prmaddi6233" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
     </section>
 
   </main>
 
   <footer class="footer mono">
-    <a href="https://github.com/prmaddi6233/prmaddi6233.github.io" target="_blank" rel="noopener">Built by Pradeep Maddi</a>
-    <span class="footer__credit">Design inspired by <a href="https://brittanychiang.com" target="_blank" rel="noopener">Brittany Chiang</a></span>
+    <span>Designed &amp; built by Pradeep Maddi</span>
+    <span>Cloud Platform Engineer · FinOps</span>
   </footer>
 
   <script src="js/main.js"></script>
