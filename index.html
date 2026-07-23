@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -23,28 +23,20 @@
   --border:rgba(226,232,240,0.1);--glow:rgba(34,211,238,0.3);
   --radius:12px;--font:'Inter',-apple-system,sans-serif;
 }
-[data-theme="light"]{
-  --bg:#ffffff;--bg2:#f6f8fa;--card:rgba(246,248,250,0.8);
-  --text:#1f2328;--text2:#656d76;--border:rgba(31,35,40,0.15);--glow:rgba(34,211,238,0.2);
-}
 html{scroll-behavior:smooth}
-body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
 body::before{content:'';position:fixed;inset:0;background:linear-gradient(135deg,#0a0e1a,#111827,#0a0e1a,#131b2e);background-size:400% 400%;animation:gradShift 15s ease infinite;z-index:-1}
-[data-theme="light"] body::before{background:linear-gradient(135deg,#fff,#f6f8fa,#fff,#f0f3f6);background-size:400% 400%}
 @keyframes gradShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 a{color:var(--link);text-decoration:none}
 
 /* Nav */
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 2rem;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);background:rgba(10,14,26,0.85);border-bottom:1px solid var(--border);transition:background .3s}
-[data-theme="light"] .nav{background:rgba(255,255,255,0.85)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 2rem;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);background:rgba(10,14,26,0.85);border-bottom:1px solid var(--border)}
 .nav__inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
 .nav__logo{font-weight:700;font-size:1.25rem;color:var(--cyan);text-decoration:none}
 .nav__links{display:flex;align-items:center;gap:2rem}
 .nav__links a{color:var(--text2);text-decoration:none;font-size:.875rem;font-weight:500;transition:color .2s}
 .nav__links a:hover{color:var(--text)}
-.nav__cta{background:var(--accent)!important;color:#0a0e1a!important;padding:.5rem 1rem;border-radius:6px;font-weight:600}
-.theme-toggle{background:none;border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:all .2s;margin-left:1rem}
-.theme-toggle:hover{border-color:var(--cyan);background:rgba(34,211,238,0.1)}
+.nav__cta{background:linear-gradient(135deg, #22d3ee, #a78bfa)!important;color:#0a0e1a!important;padding:.5rem 1rem;border-radius:6px;font-weight:600;border:none}
 .nav__burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
 .nav__burger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
 
@@ -64,8 +56,8 @@ a{color:var(--link);text-decoration:none}
 .hero__blurb strong{color:var(--text)}
 .hero__actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
 .btn{display:inline-flex;align-items:center;padding:.75rem 1.5rem;border-radius:8px;font-weight:600;font-size:.9rem;text-decoration:none;transition:all .2s}
-.btn--primary{background:var(--cyan);color:#0a0e1a}
-.btn--primary:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(34,211,238,0.4)}
+.btn--primary{background:linear-gradient(135deg, #22d3ee, #a78bfa);color:#0a0e1a;border:none}
+.btn--primary:hover{transform:translateY(-1px);background:linear-gradient(135deg, #a78bfa, #22d3ee);box-shadow:0 4px 20px rgba(34,211,238,0.3)}
 .btn--ghost{border:1px solid var(--border);color:var(--text)}
 .btn--ghost:hover{border-color:var(--cyan);background:rgba(34,211,238,0.05)}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;padding-top:2rem;border-top:1px solid var(--border)}
@@ -180,7 +172,6 @@ a{color:var(--link);text-decoration:none}
         <a href="#certs">Certifications</a>
         <a class="nav__cta" href="#contact">Contact</a>
       </nav>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
       <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -206,7 +197,7 @@ a{color:var(--link);text-decoration:none}
         </p>
         <div class="hero__actions reveal">
           <a class="btn btn--primary" href="#work">View my work</a>
-          <a class="btn btn--ghost" href="https://www.linkedin.com/in/pradeep-maddi" target="_blank" rel="noopener">Get in touch</a>
+          <a class="btn btn--primary" href="https://www.linkedin.com/in/pradeep-maddi" target="_blank" rel="noopener">Get in touch</a>
         </div>
         <div class="stats reveal" id="statsSection">
           <div class="stat"><span class="stat__num grad" data-target="150" data-suffix="+">0</span><span class="stat__label">AWS accounts</span></div>
@@ -442,22 +433,6 @@ a{color:var(--link);text-decoration:none}
 
   <script>
   (function() {
-    // === Theme Toggle ===
-    const toggle = document.getElementById('themeToggle');
-    const html = document.documentElement;
-    const stored = localStorage.getItem('theme');
-    if (stored) {
-      html.setAttribute('data-theme', stored);
-      toggle.textContent = stored === 'light' ? '☀️' : '🌙';
-    }
-    toggle.addEventListener('click', () => {
-      const current = html.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      toggle.textContent = next === 'light' ? '☀️' : '🌙';
-    });
-
     // === Mobile Burger ===
     const burger = document.getElementById('burger');
     const navLinks = document.getElementById('navLinks');
